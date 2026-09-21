@@ -1,91 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Professional Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <a class="brand" href="#"><i>+</i><b id="brand">Your Name</b></a
-      ><button id="menu">☰</button>
-      <nav>
-        <a href="#about">About</a><a href="#experience">Experience</a
-        ><a href="#achievements">Achievements</a><a href="#stories">Stories</a
-        ><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
-      </nav>
-    </header>
-    <section class="hero">
-      <div>
-        <p class="eyebrow" id="profession">PROFESSIONAL PORTFOLIO</p>
-        <h1 id="name">Your journey.<br /><em>Your impact.</em></h1>
-        <p id="bio">
-          A professional portfolio celebrating experience, achievements,
-          projects and the story behind the work.
-        </p>
-        <a class="btn" href="#achievements">Explore My Journey →</a>
-      </div>
-      <div id="photo" class="photo">PHOTO</div>
-    </section>
-    <section id="about" class="section pale">
-      <small>01 / ABOUT</small>
-      <div class="two">
-        <h2>The person behind the <em>work.</em></h2>
-        <p id="aboutBio">Your professional biography will appear here.</p>
-      </div>
-    </section>
-    <section id="experience" class="section">
-      <small>02 / EXPERIENCE</small>
-      <h2>Experience & <em>growth.</em></h2>
-      <div id="experienceList" class="empty">
-        Add experience from the dashboard.
-      </div>
-    </section>
-    <section id="achievements" class="section dark">
-      <small>03 / ACHIEVEMENTS</small>
-      <h2>Meaningful <em>milestones.</em></h2>
-      <div id="achievementsGrid" class="grid"></div>
-    </section>
-    <section id="stories" class="section warm">
-      <small>04 / STORIES</small>
-      <h2>Moments, lessons & <em>milestones.</em></h2>
-      <div id="posts" class="grid"></div>
-    </section>
-    <section id="gallery" class="section">
-      <small>05 / GALLERY</small>
-      <h2>People, places & <em>purpose.</em></h2>
-      <div id="galleryGrid" class="gallery"></div>
-    </section>
-    <section class="quote">
-      “
-      <blockquote id="quote">
-        Your work tells a story. Let your portfolio tell it beautifully.
-      </blockquote>
-      <b id="quoteName">Your Name</b>
-    </section>
-    <section id="contact" class="section">
-      <div class="contact">
-        <div>
-          <small>LET'S CONNECT</small>
-          <h2>Ready to make a <em>connection?</em></h2>
-        </div>
-        <a id="email" class="btn" href="mailto:hello@example.com"
-          >Send a Message →</a
-        >
-      </div>
-    </section>
-    <footer>
-      <span id="footer">Your Name</span><a href="admin.html">Admin</a>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabase.js"></script>
-    <script src="script.js"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Professional Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#"><span>+</span><strong id="brand">Your Name</strong></a>
+  <button id="menu">☰</button>
+  <nav>
+    <a href="#about">About</a><a href="#experience">Experience</a>
+    <a href="#achievements">Achievements</a><a href="#stories">Stories</a>
+    <a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="eyebrow" id="profession">PROFESSIONAL PORTFOLIO</p>
+    <h1 id="heroName">Your journey.<br><em>Your impact.</em></h1>
+    <p id="bio">Your professional biography will appear here.</p>
+    <a class="btn" href="#achievements">Explore My Journey →</a>
+  </div>
+  <div id="profilePhoto" class="photo">PHOTO</div>
+</section>
+
+<section id="about" class="section pale">
+  <small>01 / ABOUT</small>
+  <div class="two">
+    <h2>The person behind the <em>work.</em></h2>
+    <p id="aboutBio">Your biography will appear here.</p>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <small>02 / EXPERIENCE</small>
+  <h2>Experience & <em>growth.</em></h2>
+  <p id="experienceText">Professional experience will appear here.</p>
+</section>
+
+<section id="achievements" class="section dark">
+  <small>03 / ACHIEVEMENTS</small>
+  <h2>Meaningful <em>milestones.</em></h2>
+  <div id="achievementsGrid" class="grid"></div>
+</section>
+
+<section id="stories" class="section warm">
+  <small>04 / STORIES</small>
+  <h2>Moments, lessons & <em>milestones.</em></h2>
+  <div id="posts" class="grid"></div>
+</section>
+
+<section id="gallery" class="section">
+  <small>05 / GALLERY</small>
+  <h2>People, places & <em>purpose.</em></h2>
+  <div id="galleryGrid" class="gallery"></div>
+</section>
+
+<section class="quote">
+  <blockquote id="quote">Your work tells a story. Let your portfolio tell it beautifully.</blockquote>
+  <strong id="quoteName">Your Name</strong>
+</section>
+
+<section id="contact" class="section">
+  <div class="contact">
+    <div><small>LET'S CONNECT</small><h2>Ready to make a <em>connection?</em></h2></div>
+    <a id="email" class="btn" href="mailto:hello@example.com">Send a Message →</a>
+  </div>
+</section>
+
+<footer><span id="footerName">Your Name</span><a href="admin.html">Admin</a></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
-# My-Portfolio
-# My-Portfolio

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Supabase Login Test</title>
+</head>
+
+<body>
+
+    <h1>Supabase Login Test</h1>
+
+    <input id="email" type="email" placeholder="Email">
+    <br><br>
+
+    <input id="password" type="password" placeholder="Password">
+    <br><br>
+
+    <button id="loginBtn">Sign In</button>
+
+    <p id="result"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        const SUPABASE_URL =
+            "https://gbjqiefsgdtpptapxoku.supabase.co";
+
+        const SUPABASE_KEY =
+            "sb_publishable__To2kt4wPcn1BTEPqgcdKQ_tIbbKLhR";
+
+        const supabaseClient =
+            window.supabase.createClient(
+                SUPABASE_URL,
+                SUPABASE_KEY
+            );
+
+        document
+            .getElementById("loginBtn")
+            .addEventListener("click", async () => {
+
+                const email =
+                    document.getElementById("email").value;
+
+                const password =
+                    document.getElementById("password").value;
+
+                const result =
+                    document.getElementById("result");
+
+                result.textContent = "Signing in...";
+
+                const { data, error } =
+                    await supabaseClient.auth
+                    .signInWithPassword({
+                        email: email,
+                        password: password
+                    });
+
+                if (error) {
+                    result.textContent =
+                        "ERROR: " + error.message;
+
+                    console.error(error);
+                    return;
+                }
+
+                result.textContent =
+                    "SUCCESS! Logged in as " +
+                    data.user.email;
+
+                console.log("User:", data.user);
+            });
+    </script>
+</body>
+</html>
